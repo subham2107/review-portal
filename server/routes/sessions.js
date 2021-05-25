@@ -26,6 +26,7 @@ router.post('/', (req, res) => {
             res.status(400).send({error: "User not signed up"});
             return;
         }
+        console.log(password + "hi" +user.password);
 
         const match = bcrypt.compareSync(password, user.password);
 
@@ -34,9 +35,10 @@ router.post('/', (req, res) => {
             return;
         }
 
-        req.session.userId = user.id;
+        req.session.userId = user._id;
         res.status(204).send();
-    }).catch(() => {
+    }).catch((e) => {
+        //console.log(e);
         res.status(500).send({ error: "Internal Server Error" });
     });
 });
