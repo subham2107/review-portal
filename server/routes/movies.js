@@ -9,12 +9,12 @@ router.get('/', async (req, res) => {
     const totalNoOfMovies = await Movie.countDocuments({});
     const movies = await Movie.find({}).limit(PAGE_SIZE).skip(PAGE_SIZE * page);
     res.json({
-      totalPages: Math.ceil(totalNoOfMovies / PAGE_SIZE) - 1,
+      totalPages: Math.ceil(totalNoOfMovies / PAGE_SIZE),
       movies
     })
   }
   catch(err) {
-    console.log (err);
+    //console.log (err);
     res.status(500).send({ error: "Internal Server Error" });
   }
 });

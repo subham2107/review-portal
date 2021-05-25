@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
             res.status(400).send({error: "User not signed up"});
             return;
         }
-        console.log(password + "hi" +user.password);
+        //console.log(password + "hi" +user.password);
 
         const match = bcrypt.compareSync(password, user.password);
 

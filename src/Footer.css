@@ -1,0 +1,13 @@
+footer {
+  text-align: center;
+  color:rgb(77, 80, 83);
+  padding-bottom: 10px;
+}
+
+.footer-span {
+  color: red;
+}
+
+.footer-hr {
+  width: calc(100vw - 200px);
+}

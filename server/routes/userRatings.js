@@ -9,16 +9,23 @@ router.post('/:movieId',auth.authenticate, (req, res) => {
   let userId = req.session.userId;
   Movie.findOne({ id: req.params.movieId }).then(movie => {
     
-    movie.vote_average=((( movie.vote_average * movie.vote_count) + user_rating ) / ( movie.vote_count++ )).toFixed(2);
+    let totalValue = movie.vote_average * movie.vote_count;
     
     let alreadypresentUserId = movie.reviews.some((x) => x.userId == userId);
+
     if(alreadypresentUserId) {
-      movie.reviews.splice(movie.reviews.findIndex((a) => a.userId == userId),1);   
+      let userIndex = movie.reviews.findIndex((a) => a.userId == userId);
+      movie.vote_average=((totalValue - movie.reviews[userIndex].rating + user_rating ) / ( movie.vote_count)).toFixed(2);
+      movie.reviews.splice( userIndex,1);   
+    } else {
+      movie.vote_average=((( totalValue ) + user_rating ) / ( movie.vote_count++ )).toFixed(2);
     }
-    movie.reviews.push({ userId , review:user_review });
+    movie.reviews.push({ userId, rating: user_rating, review:user_review });
+    
     movie.save();
     res.send(movie);
-  }).catch(() => {
+  }).catch((e) => {
+      console.log(e);
       res.status(500).send({ error: "Internal Server Error" });
   });
 });

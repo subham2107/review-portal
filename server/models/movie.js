@@ -16,7 +16,7 @@ const movieSchema = new Schema({
     poster_path: String,
     vote_average: Number,
     vote_count: Number,
-    reviews : [{userId: mongoose.ObjectId, review: String} ],
+    reviews : [{userId: mongoose.ObjectId, rating: Number, review: String, } ],
     createdAt: {
       type: Date,
       default: Date.now()
