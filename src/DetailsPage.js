@@ -39,7 +39,7 @@ componentDidMount() {
         <br></br>
         
         <div className="MovieList">
-          <img  src={`${this.state.movie.poster_path}`} alt={this.state.movie.original_name} />
+          <img  src={`${this.state.movie.backdrop_path}`} alt={this.state.movie.original_name} />
           <h2>Title: {(this.state.movie.original_name)}</h2>
           <h4>Average Rating: {(this.state.movie.vote_average)}</h4>
           <h4>Rating Count: {(this.state.movie.vote_count)}</h4>

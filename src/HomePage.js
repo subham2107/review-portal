@@ -50,7 +50,7 @@ componentDidMount() {
         <br></br>
         {(this.state.movies).map((eachMovie) => (
         <div className="MovieList">
-          <img  src={eachMovie.backdrop_path} alt={eachMovie.original_name} />
+          <img  src={eachMovie.poster_path} alt={eachMovie.original_name} />
           <h2>Title: {(eachMovie.original_name)}</h2>
           <h4>Rating: {(eachMovie.vote_average)}</h4>
           <Link  to={`/movies/${(eachMovie.id)}`}>
