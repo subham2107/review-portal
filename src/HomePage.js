@@ -44,7 +44,6 @@ componentDidMount() {
 //     let pages = new Array({this.state.totalPages}).fill(null).map((v, i) => i);
     return (
       <div className="HomePage">
-        <h3>Page of {this.state.totalPages} </h3>
         <div style={{minHeight: "calc(100vh - 31px)"}}>
         {/* <NavBar/> */}
         <Banner/>
