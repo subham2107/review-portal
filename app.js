@@ -43,7 +43,7 @@ db.connect({
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
     });
 
-    // for(let page=1;page<=10;page++) {
+    // for(let page=1;page<=5;page++) {
 
     //     axios(`https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=${process.env.API_KEY}&page=${page}`)
     //     .then((response) => {
@@ -53,7 +53,7 @@ db.connect({
     //             backdrop_path : `https://image.tmdb.org/t/p/w500${response.data.results[i].backdrop_path}`,
     //             first_air_date : response.data.results[i].first_air_date,
     //             genre_ids : response.data.results[i].genre_ids,
-    //             id: response.data.results[i].id,
+    //             _id: response.data.results[i].id,
     //             name: response.data.results[i].name,
     //             origin_country : response.data.results[i].origin_country,
     //             original_language: response.data.results[i].original_language,

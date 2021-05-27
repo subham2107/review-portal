@@ -6,7 +6,7 @@ const movieSchema = new Schema({
     backdrop_path : String,
     first_air_date : String,
     genre_ids : [],
-    id: Number,
+    _id: Number,
     name: String,
     origin_country : [],
     original_language: String,

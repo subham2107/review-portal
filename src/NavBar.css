@@ -1,0 +1,139 @@
+
+
+.SearchBar {
+  background-color: #fff;
+  height: 39px;
+  width: 400px;
+  border-radius: 2px;
+  display: flex;
+}
+
+.login-signup {
+  color:#fff;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.companyLogo {
+  color: #000;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.logoY {
+  border-radius: 10px;
+  background-color: rgb(241, 241, 72);
+}
+
+.login:hover {
+  cursor: pointer;
+
+}
+
+.signup:hover {
+  cursor: pointer;
+
+}
+
+.cart-icon,
+.user-icon {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  padding-top: 20px;
+}
+
+.SearchInput {
+  padding-left: 10px;
+  width: 393px;
+  height: 30px;
+  border-radius: 2px;
+  margin: 3px 5px 5px 5px;
+  font-size: 15px;
+  border: none;
+}
+
+.SearchIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.SearchIcon:hover {
+  cursor: pointer;
+}
+
+.SearchIconWrapper {
+  padding-left: 5px;
+  height: 30px;
+  width: 35px;
+
+}
+#hamburger {
+  margin-top: 14px;
+}
+
+#hamburger:active{
+  background-color:#d4d4d4;
+
+}
+
+  .dropdown-content span {
+    display: block;
+    text-decoration: none;
+    min-width: 180px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 40px;
+    color:#555555;
+    background-color: #f6f8fa;
+    box-shadow: 1px 2px 2px rgb(0 0 0 / 10%), -1px -1px 2px rgb(0 0 0 / 8%);
+    
+  }
+  
+  .dropdown-content{
+    display: none;
+  }
+
+  .dropdown-content span:hover{
+    color:#000000;
+    background-color: #e7e7e7; 
+  }
+  
+  .dropdown-nav:hover .dropdown-content{
+        display: block;
+        position: absolute; 
+          
+  } 
+
+  .dropdown-nav:hover{
+    cursor: pointer;
+    color:#84c225;
+    
+  }
+
+
+  
+
+  .navbar {
+    /*added flex wrap..change in all*/
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        line-height: 53px;
+        background-color: #000;
+        position: sticky;
+        z-index: 999;
+        top: 0;
+        box-shadow: 1px 2px 2px rgb(0 0 0 / 10%), -1px -1px 2px rgb(0 0 0 / 8%);
+        
+        
+  } 
+
+  .dropdown-arrow{
+    height: 10px;
+    width: 10px
+  }

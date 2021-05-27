@@ -20,7 +20,9 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:movieId', (req, res) => {
-  Movie.findOne({ id: req.params.movieId }).then(movie => {
+  //console.log('movie'+req.params.movieId)
+  console.log(req.body)
+  Movie.findOne({ _id: req.params.movieId }).then(movie => {
       res.send(movie);
   }).catch(() => {
       res.status(500).send({ error: "Internal Server Error" });
