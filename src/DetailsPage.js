@@ -55,6 +55,7 @@ componentDidMount() {
             for(let i=0;i<responses[0].data.results.length;i++) {
                 if(responses[0].data.results[i].type=='Trailer') {
                    this.setState({trailer_key: responses[0].data.results[i].key}); 
+                   console.log('hello'+this.state.trailer_key);
                    break;   
                 }
 
