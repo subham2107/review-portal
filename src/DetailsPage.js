@@ -138,7 +138,7 @@ reviewClick = () => {
         
         <div className="MovieList" style={{textAlign: 'center'}}>
         {/* <video tabindex="-1" class="video-stream html5-main-video" controlslist="nodownload" style={{"width": "542px", "height": "298px", "left": "0px", "top": "4px"}} src={`https://www.youtube.com/watch?v=${this.state.trailer_key}`}></video> */}
-          <iframe className='video' src={`https://www.youtube.com/embed/${this.state.trailer_key}`}></iframe>
+          <iframe className='video' src={`https://www.youtube.com/embed/${this.state.trailer_key}`} allowFullScreen="allowFullScreen" frameBorder="0"></iframe>
           {/* <img  src={`${this.state.movie.backdrop_path}`} alt={this.state.movie.original_name} /> */}
           <h2>Title: {(this.state.movie.name)}</h2>
           <h4>Release Date: {(this.state.movie.first_air_date)}</h4>

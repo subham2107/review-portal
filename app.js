@@ -45,7 +45,7 @@ db.connect({
 
     // for(let page=1;page<=5;page++) {
 
-    //     axios(`https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=${process.env.API_KEY}&page=${page}`)
+    //     axios(`https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=${process.env.REACT_APP_API_KEY}&page=${page}`)
     //     .then((response) => {
     //     console.log(response.data.results);
     //     for(let i=0;i<response.data.results.length;i++) {
