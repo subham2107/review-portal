@@ -4,7 +4,7 @@ const Movie = require('../models/movie');
 
 router.get('/', async (req, res) => {
   try {
-    const PAGE_SIZE = 10;
+    const PAGE_SIZE = 20;
     const page = parseInt(req.query.page || "0");
     const totalNoOfMovies = await Movie.countDocuments({});
     const movies = await Movie.find({}).limit(PAGE_SIZE).skip(PAGE_SIZE * page);
@@ -18,6 +18,19 @@ router.get('/', async (req, res) => {
     res.status(500).send({ error: "Internal Server Error" });
   }
 });
+
+router.get('/search/:movieName', (req,res) => {
+  console.log(req.params.movieName);
+const regex =  new RegExp(`${req.params.movieName}`,'i');
+console.log(regex);
+  Movie.find({original_name : regex }).then(
+    movie => {
+      console.log(movie);
+      res.status(200).send(movie);
+      return;
+    }
+  )
+})
 
 router.get('/:movieId', (req, res) => {
   //console.log('movie'+req.params.movieId)

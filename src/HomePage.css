@@ -21,10 +21,16 @@
 
 .homePageMovies {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
   row-gap: 50px;
+}
+
+@media screen and (max-width: 1065px){
+  .homePageMovies {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 870px){

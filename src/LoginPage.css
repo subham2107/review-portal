@@ -1,0 +1,27 @@
+
+.form-signup-btn, 
+.form-login-btn {
+    background-color: #276ef1;
+    color: #fff;
+    font-size: 16px;
+    line-height: 2; 
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 70px;
+    max-width: 70px; 
+
+}
+.email-input {
+  margin-bottom: 15px;
+}
+.form-login-btn {
+  margin-right: 37px;
+}
+.LoginPage {
+  height: 320px;
+  margin-right: 30px;
+}
