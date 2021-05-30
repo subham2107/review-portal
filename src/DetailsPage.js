@@ -61,21 +61,21 @@ componentDidMount() {
 
             }
 
-            //for(let i=0;i<responses[1].data.cast.length;i++) {
-              //if(responses[1].data.cast[i].known_for_department=='Acting') {
-                 //this.setState({cast: responses[1].data.cast}); 
-                //  for(let i=0;i<responses[1].data.cast.length;i++) {
-                //   //this.setState({cast: responses[0].data.results[i].key}); 
-                //   this.state.cast.push({name: this.state.cast[i].name,image: this.state.cast[i].profile_path});
-                //   console.log(this.state.cast[i].name);  
-                //   console.log(this.state.cast[i].profile_path);
+          //   for(let i=0;i<responses[1].data.cast.length;i++) {
+          //     if(responses[1].data.cast[i].known_for_department=='Acting') {
+          //        this.setState({name: responses[1].data.cast[i].profile_path}); 
+              
+          //         //this.setState({cast: responses[0].data.results[i].key}); 
+          //         //this.state.cast.push({name: this.state.cast[i].name,image: this.state.cast[i].profile_path});
+          //         console.log(this.state.cast[i].name);  
+          //         console.log(this.state.cast[i].profile_path);
 
-                //  }
-                 //console.log('helloooooo'+ responses[1].data);
+                 
+          //        console.log('helloooooo'+ responses[1].data);
                   
-              //}
+          //     }
 
-          //}
+          // }
 
           });
 
