@@ -72,7 +72,7 @@ render() {
 
   return (
 <header className="navbar">
-   <Link to='/'><div className="companyLogo"><b className="logoY">TVdb</b></div></Link>
+   <Link to='/'><div className="companyLogo"><b className="logoY">TVDb</b></div></Link>
    {this.props.displaySearch? <div></div>:<SearchBar searchMovieResult={this.searchMovieResult}/>}
    <span className="login-signup">{logininfo}</span>
    {this.state.isPopUp?<PopUp togglePopUp={this.togglePopUp}/>:null}

@@ -15,7 +15,7 @@ router.post('/:movieId',auth.authenticate, (req, res) => {
     //console.log(movie.vote_average * movie.vote_count);console.log(typeof(movie.vote_average * movie.vote_count));
     let totalValue = (movie.vote_average * movie.vote_count);
     console.log('total withot change'+totalValue);
-    totalValue = Math.trunc((movie.vote_average * movie.vote_count) * 100) / 100;
+    //totalValue = Math.trunc((movie.vote_average * movie.vote_count) * 100) / 100;
     console.log('total with change'+totalValue);
     // console.log(totalValue);
     // totalValue = Math.round(totalValue);
@@ -39,7 +39,7 @@ router.post('/:movieId',auth.authenticate, (req, res) => {
       movie.vote_average=(( totalValue  + user_rating ) / ( movie.vote_count ));
     }
     console.log('avg without change'+movie.vote_average);
-    movie.vote_average=Math.trunc(movie.vote_average * 100) / 100;
+    movie.vote_average=Math.round(movie.vote_average * 100) / 100;
     console.log('avg with change'+movie.vote_average);
     // console.log('review'+movie.reviews[0].review);
     // console.log('review'+movie.reviews[1].review);

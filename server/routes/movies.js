@@ -23,7 +23,7 @@ router.get('/search/:movieName', (req,res) => {
   console.log(req.params.movieName);
 const regex =  new RegExp(`${req.params.movieName}`,'i');
 console.log(regex);
-  Movie.find({original_name : regex }).then(
+  Movie.find({name : regex }).then(
     movie => {
       console.log(movie);
       res.status(200).send(movie);
