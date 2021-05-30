@@ -4,7 +4,7 @@ const Movie = require('../models/movie');
 const auth = require('../middlewares/auth');
 
 router.post('/:movieId',auth.authenticate, (req, res) => {
-  let user_rating =  (req.body.user_rating);
+  let user_rating =  parseInt(req.body.user_rating);
   console.log('user_rating'+user_rating);console.log('user_rating'+typeof(user_rating));
   //console.log(req.body.user_rating);console.log(typeof(req.body.user_rating));
   let user_review = req.body.user_review;
@@ -44,13 +44,15 @@ router.post('/:movieId',auth.authenticate, (req, res) => {
     // console.log('review'+movie.reviews[0].review);
     // console.log('review'+movie.reviews[1].review);
     movie.reviews.push({ userId, rating: user_rating, review: user_review });
-    movie.reviews.reverse();
+    //movie.reviews.reverse();
     //console.log('review'+movie.reviews[0].review);
     //console.log('review'+movie.reviews[1].review);
-    movie.save();
+    movie.save().then(()=>{
+      console.log(movie);
+      res.send(movie);
+    })
     //console.log('avg')
-    console.log(movie);
-    res.send(movie);
+    
   }).catch((e) => {
       console.log(e);
       res.status(500).send({ error: "Internal Server Error" });

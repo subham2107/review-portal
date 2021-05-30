@@ -41,6 +41,7 @@ max-width: 80px;
 .video{
   width: 490px;
   height: 300px;
+  
 }
 
 .userReview {
@@ -56,11 +57,11 @@ max-width: 80px;
   }
 
   .video{
-    width: 368px;
+    width: 350px;
     height: 200px;
   }
   .userReview {
-    width: 368px;
+    width: 350px;
   }
 }
 

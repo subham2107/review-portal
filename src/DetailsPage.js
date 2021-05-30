@@ -63,7 +63,7 @@ componentDidMount() {
 
             //for(let i=0;i<responses[1].data.cast.length;i++) {
               //if(responses[1].data.cast[i].known_for_department=='Acting') {
-                 this.setState({cast: responses[1].data.cast}); 
+                 //this.setState({cast: responses[1].data.cast}); 
                 //  for(let i=0;i<responses[1].data.cast.length;i++) {
                 //   //this.setState({cast: responses[0].data.results[i].key}); 
                 //   this.state.cast.push({name: this.state.cast[i].name,image: this.state.cast[i].profile_path});
@@ -71,7 +71,7 @@ componentDidMount() {
                 //   console.log(this.state.cast[i].profile_path);
 
                 //  }
-                 console.log(this.state.cast);
+                 //console.log('helloooooo'+ responses[1].data);
                   
               //}
 
@@ -95,7 +95,7 @@ onInput = event => {
 reviewClick = (e) => {
   //e.preventDefault();
   console.log('reviewClick func')
-  if(this.state.user_rating || this.state.user_review) {
+  if(this.state.user_rating && this.state.user_review) {
 
   const { user_review, user_rating, message } = this.state;
 
@@ -119,7 +119,7 @@ reviewClick = (e) => {
       });
   }
   else {
-    alert('Please enter review or rating')
+    alert('Please enter both review and rating')
   }
   }
 
@@ -134,6 +134,8 @@ reviewClick = (e) => {
     else {
       myButton = <button className="submitBtn" onClick={this.reviewClick}><b>POST</b></button>
     }
+
+    
     return (
       <div>
 
@@ -143,7 +145,7 @@ reviewClick = (e) => {
         
         <div className="DetailPage"  >
           <div className="detail-column1">
-          <h1>Title: {(this.state.movie.name)}</h1>
+          <h1>{(this.state.movie.name)}</h1>
           <iframe className='video' src={`https://www.youtube.com/embed/${this.state.trailer_key}`} allowFullScreen="allowFullScreen" frameBorder="0"></iframe>
           {/* <img  src={`${this.state.movie.backdrop_path}`} alt={this.state.movie.original_name} /> */}
           
@@ -190,7 +192,7 @@ reviewClick = (e) => {
           
           <div className="detail-column2">
           <h3>Reviews & Ratings: </h3>
-          {(this.state.movie.reviews).map((eachReview) => (
+          {(this.state.movie.reviews).slice(0).reverse().map((eachReview) => (
           <div className='review-rating' >
           {/* {(eachReview.review)||(eachReview.rating)?<li>Review: {(eachReview.review)} </li>:null}
           {(eachReview.review)||(eachReview.rating)?<span> Rating: {(eachReview.rating)}</span>:null} */}
