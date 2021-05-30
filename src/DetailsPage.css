@@ -25,7 +25,7 @@ max-width: 80px;
 .detail-column1 {
   margin-left: 20px;
   margin-right: 20px;
-  min-width: auto;
+  
   line-height: 2; 
 }
 
@@ -33,7 +33,7 @@ max-width: 80px;
   
   margin-left: 20px;
   margin-right: 20px;
-  min-width: auto;
+  
   line-height: 2; 
   overflow-y: auto;
 }
@@ -56,11 +56,11 @@ max-width: 80px;
   }
 
   .video{
-    width: 340px;
+    width: 368px;
     height: 200px;
   }
   .userReview {
-    width: 340px;
+    width: 368px;
   }
 }
 
