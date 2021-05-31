@@ -68,7 +68,9 @@ getSearchResult = (moviesSearchResult) => {
         <br></br>
         {this.state.zeroSearchResult==false? 
         <MovieList movies={this.state.movies}/>
-        :<div class="zeroMovieSearchResult"><div>TV series not found...</div></div>}
+        :<div class="zeroMovieSearchResult"><img className="unsuccessfullSearchIcon" src="images/icons8-nothing-found-48.png"></img>
+        <div>Sorry, we couldn't find any matching results...</div>
+        </div>}
         </div>
         <hr className="footer-hr"/>
         <Footer/>

@@ -27,13 +27,20 @@
   row-gap: 50px;
 }
 
+.unsuccessfullSearchIcon {
+  height: 130px;
+  width: 130px;
+}
+
 .zeroMovieSearchResult {
   color:white;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
+  font-size: 17px;
+  height: 270px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
   align-items: center;
-  height: 300px;
+  
 }
 
 @media screen and (max-width: 1065px){
