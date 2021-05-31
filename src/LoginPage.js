@@ -78,7 +78,7 @@ class LoginPage extends React.Component {
   render() {
     return (
     <div>
-    <div className="LoginPage" style={{textAlign: 'center'}}>
+    <div className="loginPage" style={{textAlign: 'center'}}>
       <span >LOGIN / SIGNUP</span>
       <br></br>
       {this.state.messageLogin? <span style={{ color: 'red', marginTop: '0'}}>{this.state.messageLogin}</span> : null} 
@@ -88,7 +88,7 @@ class LoginPage extends React.Component {
           <input className='email-input' placeholder="email" name="email" required type="email" onInput={this.onInput} value={this.state.email}></input>
         </div>
         <div>
-          <input placeholder="password" name="password" required type="password" onInput={this.onInput} value={this.state.password}></input>
+          <input className='password-input' placeholder="password" name="password" required type="password" onInput={this.onInput} value={this.state.password}></input>
         </div>
           <div>
             <input className='form-login-btn'  type="submit" onClick={this.onLoginClick} value="Login"></input>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './PopUp.css'
+import './LoginPage.css'
 import LoginPage from './LoginPage.js'
 class PopUp extends Component {
   handleClick = () => {

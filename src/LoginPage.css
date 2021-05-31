@@ -16,12 +16,21 @@
 
 }
 .email-input {
+  width: 75%;
   margin-bottom: 15px;
 }
+
+.password-input {
+  width: 75%;
+
+}
+
 .form-login-btn {
   margin-right: 37px;
 }
-.LoginPage {
+
+.loginPage {
   height: 320px;
+  width: 90%;
   margin-right: 30px;
 }

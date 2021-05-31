@@ -39,6 +39,7 @@ getSearchResult = (moviesSearchResult) => {
     this.setState({movies:moviesSearchResult})
   }
   else {
+    
     this.componentDidMount();
   }
 

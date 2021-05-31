@@ -15,9 +15,10 @@
 }
 .popup-inner{
   position: relative;
-  padding-left: 32px;
+  padding-left: 25px;
   padding-top: 0px;
   width: 100%;
+  min-width: 250px;
   max-width: 250px;
   background-color:white;
   color: black;
@@ -26,7 +27,7 @@
 .popup-inner .close-button{
   position: relative;
   top: 16px;
-  right: 16px;
+  right: 10px;
   color: black;
   z-index: 1;
   /* color: black; */
