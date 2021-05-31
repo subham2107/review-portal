@@ -1,12 +1,4 @@
 
-.SearchBar {
-  background-color: #fff;
-  height: 39px;
-  width: 350px;
-  border-radius: 3px;
-  display: flex;
-}
-
 .login-signup {
   color:#fff;
   cursor: pointer;
@@ -44,31 +36,6 @@
 
 
 
-.SearchInput {
-  padding-left: 10px;
-  width: 340px;
-  height: 30px;
-  border-radius: 2px;
-  margin: 3px 5px 5px 5px;
-  font-size: 15px;
-  border: none;
-}
-
-.SearchIcon {
-  height: 20px;
-  width: 20px;
-}
-
-.SearchIcon:hover {
-  cursor: pointer;
-}
-
-.SearchIconWrapper {
-  padding-left: 5px;
-  height: 30px;
-  width: 45px;
-
-}
 #hamburger {
   margin-top: 14px;
 }
