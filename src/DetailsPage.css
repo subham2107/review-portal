@@ -21,12 +21,6 @@ max-width: 80px;
   
 }
 
-.profile-poster {
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-}
-
 .detail-column1 {
   margin-left: 20px;
   margin-right: 20px;
@@ -52,15 +46,25 @@ max-width: 80px;
 .eachCastDiv {
   display: flex;
   text-align: center;
-  max-width: 100px;
-  max-height: 500px;  
+  min-height: 150px; 
+   
 }
 
 .detailsPageCasts {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
+}
+
+.cast-card {
+  min-height: 180px;
+}
+
+.profile-poster {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
 }
 
 .userReview {
@@ -73,15 +77,6 @@ max-width: 80px;
   .profile-poster {
     height: 80px;
     width: 80px;
-  }
-
-}
-
-@media screen and (max-width: 1125px) {
-
-  .profile-poster {
-    height: 75px;
-    width: 75px;
   }
 
 }
@@ -101,7 +96,8 @@ max-width: 80px;
 
 }
 
-@media screen and (max-width: 407px) {
+@media screen and (max-width: 415px) {
+  
 
   .profile-poster {
     height: 50px;
