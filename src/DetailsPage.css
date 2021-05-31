@@ -21,6 +21,11 @@ max-width: 80px;
   
 }
 
+.profile-poster {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
 
 .detail-column1 {
   margin-left: 20px;
@@ -44,15 +49,67 @@ max-width: 80px;
   
 }
 
+.eachCastDiv {
+  display: flex;
+  text-align: center;
+  max-width: 100px;
+  max-height: 500px;  
+}
+
+.detailsPageCasts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
 .userReview {
   height: 100px;
   width: 100%;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1125px) {
+
+  .profile-poster {
+    height: 80px;
+    width: 80px;
+  }
+
+}
+
+@media screen and (max-width: 1125px) {
+
+  .profile-poster {
+    height: 75px;
+    width: 75px;
+  }
+
+}
+
+
+@media screen and (max-width: 870px) {
   .DetailPage {
     
     grid-template-columns: 1fr;
+  
+  }
+
+  .profile-poster {
+    height: 70px;
+    width: 70px;
+  }
+
+}
+
+@media screen and (max-width: 407px) {
+
+  .profile-poster {
+    height: 50px;
+    width: 50px;
+  }
+
+  .cast-name {
+    font-size: 15px;
   
   }
 

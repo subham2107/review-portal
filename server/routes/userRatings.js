@@ -14,8 +14,9 @@ router.post('/:movieId',auth.authenticate, (req, res) => {
   Movie.findOne({ _id: req.params.movieId }).then(movie => {
     //console.log(movie.vote_average * movie.vote_count);console.log(typeof(movie.vote_average * movie.vote_count));
     let totalValue = (movie.vote_average * movie.vote_count);
+    
     console.log('total withot change'+totalValue);
-    //totalValue = Math.trunc((movie.vote_average * movie.vote_count) * 100) / 100;
+    totalValue = Math.round((movie.vote_average * movie.vote_count) * 100) / 100;
     console.log('total with change'+totalValue);
     // console.log(totalValue);
     // totalValue = Math.round(totalValue);
