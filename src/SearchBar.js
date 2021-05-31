@@ -6,19 +6,30 @@ class SearchBar extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            value:''
+            value:'',
+            search:''
         };
     }
 
 onInput = event => {
-    if(event.target.value){
-    fetch(`/api/movies/search/${event.target.value}`)
+    this.setState({ [event.target.name]: event.target.value });
+    if(event.target.value.length==0)
+    {
+        window.location.reload();
+    }
+}
+
+searchIconClick = () => {
+    console.log(this.state.search);
+    
+    if(this.state.search){
+    fetch(`/api/movies/search/${this.state.search}`)
     
             .then((response) => response.json())
             .then(response => {this.props.searchMovieResult(response)});
     }
     else {
-        this.props.searchMovieResult([])
+        this.props.searchMovieResult([]);
         }
     }
 
@@ -33,7 +44,7 @@ onInput = event => {
               onInput={this.onInput} 
               value={this.state.search}
         />
-      <div className="SearchIconWrapper"><img className="SearchIcon" src='/images/search-24px.svg' alt='searchIcon'/></div>
+      <div className="SearchIconWrapper"><img onClick={this.searchIconClick} className="SearchIcon" src='/images/search-24px.svg' alt='searchIcon'/></div>
     
       </div>
       );

@@ -12,6 +12,7 @@ function MovieList(props) {
     }
  // console.log(props.movies);
 return(
+
 <div className="homePageMovies" >
         {(movielist).map((eachMovie) => (
         <Link  to={`/movies/${(eachMovie._id)}`}>
@@ -27,6 +28,7 @@ return(
         </div>
         </Link>
         ))}
-        </div>);
+        </div>
+);
 }
 export default MovieList;

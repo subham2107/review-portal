@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/search/:movieName', (req,res) => {
-  console.log(req.params.movieName);
+console.log(req.params.movieName);
 const regex =  new RegExp(`${req.params.movieName}`,'i');
 console.log(regex);
   Movie.find({name : regex }).then(
@@ -29,8 +29,10 @@ console.log(regex);
       res.status(200).send(movie);
       return;
     }
-  )
-})
+  ).catch(() => {
+    res.status(404).send({ error: "Movie not found" });
+});
+});
 
 router.get('/:movieId', (req, res) => {
   //console.log('movie'+req.params.movieId)

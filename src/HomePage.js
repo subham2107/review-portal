@@ -16,18 +16,19 @@ class HomePage extends React.Component {
     this.state = {
       totalPages : '',
       pageNumber : '',
-      movies: []
+      movies: [],
+      zeroSearchResult: false
   };
   
 }
 
 
 componentDidMount() {
-  console.log(window.location)
+  //console.log(window.location)
   fetch(`/api/movies?page=0`)
   .then(response => response.json())
   .then(response => {
-  console.log(response.movies);
+  //console.log(response.movies);
   this.setState({totalPages: response.totalPages});
   this.setState({movies: response.movies});
   //console.log (response.movies)            
@@ -39,8 +40,9 @@ getSearchResult = (moviesSearchResult) => {
     this.setState({movies:moviesSearchResult})
   }
   else {
+    //this.componentDidMount();
+    this.setState({zeroSearchResult:true})
     
-    this.componentDidMount();
   }
 
 }
@@ -64,7 +66,9 @@ getSearchResult = (moviesSearchResult) => {
         <NavBar getSearchResult = {this.getSearchResult}/>
         <Banner/>
         <br></br>
+        {this.state.zeroSearchResult==false? 
         <MovieList movies={this.state.movies}/>
+        :<div class="zeroMovieSearchResult"><div>TV series not found...</div></div>}
         </div>
         <hr className="footer-hr"/>
         <Footer/>

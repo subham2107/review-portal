@@ -27,6 +27,15 @@
   row-gap: 50px;
 }
 
+.zeroMovieSearchResult {
+  color:white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
 @media screen and (max-width: 1065px){
   .homePageMovies {
     grid-template-columns: 1fr 1fr 1fr 1fr;
