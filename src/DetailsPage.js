@@ -144,7 +144,7 @@ reviewClick = (e) => {
           <div>
           
           <label>Give rating & review </label><select value={this.state.user_rating} onChange={this.onInput} name="user_rating">
-                    <option value="select">select</option>
+                    <option value="select">Rate</option>
                     <option value="10">10</option>
                     <option value="9">9</option>
                     <option value="8">8</option>
