@@ -96,16 +96,16 @@ max-width: 80px;
 
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 400px) {
   
 
   .profile-poster {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
   }
 
   .cast-name {
-    font-size: 12px;
+    font-size: 14px;
   
   }
 
