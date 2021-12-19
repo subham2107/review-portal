@@ -4,7 +4,7 @@ const Movie = require('../models/movie');
 
 router.get('/', async (req, res) => {
   try {
-    const PAGE_SIZE = 20;
+    const PAGE_SIZE = 30;
     const page = parseInt(req.query.page || "0");
     const totalNoOfMovies = await Movie.countDocuments({});
     const movies = await Movie.find({}).limit(PAGE_SIZE).skip(PAGE_SIZE * page);
@@ -25,7 +25,7 @@ const regex =  new RegExp(`${req.params.movieName}`,'i');
 console.log(regex);
   Movie.find({name : regex }).then(
     movie => {
-      console.log(movie);
+      //console.log(movie);
       res.status(200).send(movie);
       return;
     }
@@ -36,7 +36,7 @@ console.log(regex);
 
 router.get('/:movieId', (req, res) => {
   //console.log('movie'+req.params.movieId)
-  console.log(req.body)
+  //console.log(req.body)
   Movie.findOne({ _id: req.params.movieId }).then(movie => {
       res.send(movie);
   }).catch(() => {
