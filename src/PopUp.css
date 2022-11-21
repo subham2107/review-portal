@@ -3,7 +3,7 @@
 } */
 .popup{
   opacity: 0.97;
-  background-color: rgb(68, 68, 68);
+  background-color: rgba(50,50,50,.8);
   position: fixed;
   top: 0;
   left: 0;
