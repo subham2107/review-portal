@@ -1,4 +1,4 @@
-# Movie Rating and Review Portal
+# Movie Rating and Review Portal.
 
 You can check it out here: https://tvdb.onrender.com/
 
